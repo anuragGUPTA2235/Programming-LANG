@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    char string[] = "anuragshekhar";
+    int  length = sizeof(string)/sizeof(char);
+
+    printf("%d\n",length);
+
+    for(int i = 0;i<length-1;++i)
+    {
+        printf("%c\n",string[i]);
+    }
+
+    int left = 0;
+    int right = length - 2;
+
+    while(left != right){
+            char temp = string[left];
+            string[left] = string[right];
+            string[right] = temp;
+        left ++;
+        right--;
+    }
+
+    for(int i = 0;i<length-1;++i)
+    {
+        printf("%c\n",string[i]);
+    }
+
+    return  0;
+}
